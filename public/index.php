@@ -17,28 +17,23 @@ $appName = htmlspecialchars((string)config_value('app_name'), ENT_QUOTES, 'UTF-8
 </head>
 <body>
     <header class="topbar">
-        <div class="brand-pill">Rede Maravilha</div>
-        <div class="brand-center">
-            <span class="brand-mark">IA</span>
-            <div>
-                <strong>InfoAudio Link</strong>
-                <small>Monitoramento PHP</small>
+        <div class="logo-group">
+            <div class="badge-maravilha">maravilha <span>REDE</span></div>
+            <div class="logo-center">
+                <div class="logo-main">
+                    <span class="logo-info">info</span><span class="logo-audio">audio</span>
+                </div>
+                <div class="logo-sub">LINK MANAGER</div>
             </div>
+            <div class="badge-maravilha">maravilha <span>REDE</span></div>
         </div>
-        <div class="brand-pill">Monitoramento</div>
     </header>
 
     <nav class="toolbar" aria-label="Controles de monitoramento">
-        <button id="start-monitoring" class="wbtn primary">Iniciar monitoramento</button>
+        <button id="play-all" class="wbtn primary">Escutar todos</button>
         <button id="mute-all" class="wbtn danger">Mutar todos</button>
         <button id="reconnect-all" class="wbtn success">Reconectar todos</button>
-
-        <div class="column-group" role="group" aria-label="Modo de colunas">
-            <button class="wbtn compact column-button" data-cols="1">1 coluna</button>
-            <button class="wbtn compact column-button active" data-cols="2">2</button>
-            <button class="wbtn compact column-button" data-cols="3">3</button>
-            <button class="wbtn compact column-button" data-cols="4">4</button>
-        </div>
+        <button id="toggle-columns" class="wbtn">Alterar modo (2 colunas)</button>
 
         <div class="filter-box">
             <button id="filter-toggle" class="wbtn">Selecionar radios</button>

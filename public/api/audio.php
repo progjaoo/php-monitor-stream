@@ -24,12 +24,14 @@ header('Access-Control-Allow-Origin: *');
 header('Cache-Control: no-store, no-cache, must-revalidate');
 header('Content-Type: audio/mpeg');
 header('X-Accel-Buffering: no');
+header('X-Content-Type-Options: nosniff');
 
 $ch = curl_init($url);
 curl_setopt_array($ch, [
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_CONNECTTIMEOUT_MS => 2500,
     CURLOPT_TIMEOUT => 0,
+    CURLOPT_BUFFERSIZE => 8192,
     CURLOPT_USERAGENT => 'MonitoramentoPhp/1.0',
     CURLOPT_HTTPHEADER => [
         'Accept: */*',
